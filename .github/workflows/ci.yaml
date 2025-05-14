@@ -1,0 +1,52 @@
+name: Deploy Development environment
+
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+    
+
+
+jobs:
+
+  build:
+    name: 📦 Build project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build-app
+        run: echo "🔧 Build is success..."
+    
+  unit-test:
+    name: 🕵️ Unit tests
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Run unit tests
+        run: echo "Unit tests are success..."
+
+  deploy-app:
+    name: 🚀 Deploy-app
+    runs-on: ubuntu-latest
+    needs: [unit-test]
+    steps:
+      - name: Deploy the app
+        run: echo "App deploy is success..."
+    
+
+  e2e-tests:
+    name: 🧪 E2E tests
+    needs: [deploy-app]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run e2e tests
+        run: echo "🔧 Build is success..."
+  
+  tear-down:
+    name: 🧪 Clean-up
+    needs: [e2e-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free up resources
+        run: echo "teardown is success..."
+
