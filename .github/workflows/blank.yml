@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: workflow runs only manually
+name: DB dump workflow
 
 # Controls when the workflow will run
 on:
