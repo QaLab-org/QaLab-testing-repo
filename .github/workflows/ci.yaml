@@ -47,7 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run e2e tests
-        run: echo "🔧 Build is success..."
+        run: | 
+          echo "🔧 Build is success..."
+          exit 1
+        
   
   tear-down:
     name: 🧪 Clean-up
