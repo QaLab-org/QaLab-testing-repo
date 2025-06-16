@@ -18,6 +18,10 @@ jobs:
         run: |
               echo "🔧 Build is success..."
               sleep 60
+      - name: run-app
+        run: |
+              echo " Different log"
+              sleep 60
   lint:
     name: 🕵️ Lint
     runs-on: ubuntu-latest
