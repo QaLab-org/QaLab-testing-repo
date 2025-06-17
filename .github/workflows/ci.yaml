@@ -20,7 +20,7 @@ jobs:
               sleep 60
       - name: run-app
         run: |
-              echo " Different log"
+              echo " different log"
               sleep 60
   lint:
     name: 🕵️ Lint
