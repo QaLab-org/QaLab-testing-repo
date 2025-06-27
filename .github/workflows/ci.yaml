@@ -1,4 +1,4 @@
-name: Deploy Development environment
+name: Deploy Development environment test
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
       - "main"
   workflow_dispatch:
     
+
+
 
 
 jobs:
