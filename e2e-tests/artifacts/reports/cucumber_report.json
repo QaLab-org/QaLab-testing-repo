@@ -1,0 +1,1082 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-run;[case_id_6648][case_id_6649][case_id_6650][case_id_6651]-create-run-using-container-volume-minimization",
+        "keyword": "Scenario Outline",
+        "line": 33,
+        "name": "[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9056629492
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "a logged user with \"Owner\" role",
+            "match": {
+              "location": "src/test/steps/Auth/login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2837460127
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Click On Create Load",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263845676
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "\"Land & Sea shipment\" Transportation Mode Is Selected By Default",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600700574
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user selects a CSV file \"test-data/valid_csv.csv\"",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1669272057
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "User Set Load Name",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99128903
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "User Click On Save and Run Button",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 516085739
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User Should Be Redirected To Create Run Page",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1267949346
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Container Volume Minimization Is Selected By default",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2821537
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User select container category as \"Sea Containers\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2043127877
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "User select container name as \"40 Standard, 20 Standard\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409747727
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "The Other Container Categories Should Be Disabled According To Selected \"Sea Containers\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13992287
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User Click On Next Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 278333336
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "User Select \"Instant\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1109272424
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "User Set Run Name",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80195337
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "User Click On Run Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 275087836
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Run Should Be Created",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2197848398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Run Should succeed",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24341890588
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5992473553
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test-organization",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@myriad360",
+            "line": 11
+          },
+          {
+            "name": "@issue",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-run;[case_id_6648][case_id_6649][case_id_6650][case_id_6651]-create-run-using-container-volume-minimization",
+        "keyword": "Scenario Outline",
+        "line": 34,
+        "name": "[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10443043925
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "a logged user with \"Owner\" role",
+            "match": {
+              "location": "src/test/steps/Auth/login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1719730679
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Click On Create Load",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1719129028
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "\"Land & Sea shipment\" Transportation Mode Is Selected By Default",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3491332703
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user selects a CSV file \"test-data/valid_csv.csv\"",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1905244844
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "User Set Load Name",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56083967
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "User Click On Save and Run Button",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 510430771
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User Should Be Redirected To Create Run Page",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 581540274
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Container Volume Minimization Is Selected By default",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 899973
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User select container category as \"Ground Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2043710713
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "User select container name as \"US Pallet, Euro Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1162766451
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "The Other Container Categories Should Be Disabled According To Selected \"Ground Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5989625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User Click On Next Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204124492
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "User Select \"Instant\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1073385653
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "User Set Run Name",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39530723
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "User Click On Run Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196776390
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Run Should Be Created",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2080923456
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Run Should succeed",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:140"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 480004288539,
+              "error_message": "Error: function timed out, ensure the promise resolves within 480000 milliseconds\n    at Timeout.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 6976328813,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'data')\n    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)\n    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test-organization",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@myriad360",
+            "line": 11
+          },
+          {
+            "name": "@issue",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-run;[case_id_6648][case_id_6649][case_id_6650][case_id_6651]-create-run-using-container-volume-minimization",
+        "keyword": "Scenario Outline",
+        "line": 35,
+        "name": "[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10398459290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "a logged user with \"Owner\" role",
+            "match": {
+              "location": "src/test/steps/Auth/login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3236542914
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Click On Create Load",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2894892675
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "\"Land & Sea shipment\" Transportation Mode Is Selected By Default",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5733077941
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user selects a CSV file \"test-data/valid_csv.csv\"",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1558440540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "User Set Load Name",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78504892
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "User Click On Save and Run Button",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 570215749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User Should Be Redirected To Create Run Page",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199980929
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Container Volume Minimization Is Selected By default",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2792105
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User select container category as \"Sea Containers\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3004280991
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "User select container name as \"40 Standard\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1091327616
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "The Other Container Categories Should Be Disabled According To Selected \"Sea Containers\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14613370
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User Click On Next Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 407762180
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "User Select \"Instant\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1148067133
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "User Set Run Name",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105165601
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "User Click On Run Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 336184106
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Run Should Be Created",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2670633313
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Run Should succeed",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9022220811
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 5984737054,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'data')\n    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)\n    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test-organization",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@myriad360",
+            "line": 11
+          },
+          {
+            "name": "@issue",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-run;[case_id_6648][case_id_6649][case_id_6650][case_id_6651]-create-run-using-container-volume-minimization",
+        "keyword": "Scenario Outline",
+        "line": 36,
+        "name": "[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9499158338
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "a logged user with \"Owner\" role",
+            "match": {
+              "location": "src/test/steps/Auth/login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2655389481
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Click On Create Load",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 771530882
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "\"Land & Sea shipment\" Transportation Mode Is Selected By Default",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2406511091
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user selects a CSV file \"test-data/valid_csv.csv\"",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2133987157
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "User Set Load Name",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74637522
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "User Click On Save and Run Button",
+            "match": {
+              "location": "src/test/steps/Loads/createLoad.steps.ts:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600551581
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User Should Be Redirected To Create Run Page",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 744325970
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Container Volume Minimization Is Selected By default",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2588460
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User select container category as \"Ground Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2734823315
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "User select container name as \"US Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1130222778
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "The Other Container Categories Should Be Disabled According To Selected \"Ground Pallet\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10755560
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User Click On Next Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 380580912
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "User Select \"Instant\"",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 737266566
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "User Set Run Name",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105592647
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "User Click On Run Button",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 386442797
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Run Should Be Created",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1527672472
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Run Should succeed",
+            "match": {
+              "location": "src/test/steps/Runs/createRun.steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7753166610
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 6079755255,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'data')\n    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)\n    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test-organization",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@myriad360",
+            "line": 11
+          },
+          {
+            "name": "@issue",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-run",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Create Run",
+    "tags": [
+      {
+        "name": "@test-organization",
+        "line": 1
+      }
+    ],
+    "uri": "src/test/features/Runs/createRun.feature"
+  }
+]

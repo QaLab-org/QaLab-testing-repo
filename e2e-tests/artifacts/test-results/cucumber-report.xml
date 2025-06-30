@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="678.513" tests="4" skipped="0" failures="3" errors="0" timestamp="2025-06-12T19:19:24.021Z">
+  <testcase classname="Create Run" name="[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization - #1.1" time="56.071">
+    <system-out><![CDATA[Given a logged user with "Owner" role.......................................passed
+And User Click On Create Load...............................................passed
+Given "Land & Sea shipment" Transportation Mode Is Selected By Default......passed
+And the user selects a CSV file "test-data/valid_csv.csv"...................passed
+And User Set Load Name......................................................passed
+And User Click On Save and Run Button.......................................passed
+Then User Should Be Redirected To Create Run Page...........................passed
+And Container Volume Minimization Is Selected By default....................passed
+When User select container category as "Sea Containers".....................passed
+And User select container name as "40 Standard, 20 Standard"................passed
+Then The Other Container Categories Should Be Disabled According To Selected "Sea Containers"..passed
+When User Click On Next Button..............................................passed
+And User Select "Instant"...................................................passed
+And User Set Run Name.......................................................passed
+And User Click On Run Button................................................passed
+Then Run Should Be Created..................................................passed
+And Run Should succeed......................................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Create Run" name="[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization - #1.2" time="514.229">
+    <failure type="TypeError" message="Cannot read properties of undefined (reading 'data')"><![CDATA[    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)
+    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    <system-out><![CDATA[Given a logged user with "Owner" role.......................................passed
+And User Click On Create Load...............................................passed
+Given "Land & Sea shipment" Transportation Mode Is Selected By Default......passed
+And the user selects a CSV file "test-data/valid_csv.csv"...................passed
+And User Set Load Name......................................................passed
+And User Click On Save and Run Button.......................................passed
+Then User Should Be Redirected To Create Run Page...........................passed
+And Container Volume Minimization Is Selected By default....................passed
+When User select container category as "Ground Pallet"......................passed
+And User select container name as "US Pallet, Euro Pallet"..................passed
+Then The Other Container Categories Should Be Disabled According To Selected "Ground Pallet"..passed
+When User Click On Next Button..............................................passed
+And User Select "Instant"...................................................passed
+And User Set Run Name.......................................................passed
+And User Click On Run Button................................................passed
+Then Run Should Be Created..................................................passed
+And Run Should succeed......................................................failed]]></system-out>
+  </testcase>
+  <testcase classname="Create Run" name="[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization - #1.3" time="49.468">
+    <failure type="TypeError" message="Cannot read properties of undefined (reading 'data')"><![CDATA[    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)
+    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    <system-out><![CDATA[Given a logged user with "Owner" role.......................................passed
+And User Click On Create Load...............................................passed
+Given "Land & Sea shipment" Transportation Mode Is Selected By Default......passed
+And the user selects a CSV file "test-data/valid_csv.csv"...................passed
+And User Set Load Name......................................................passed
+And User Click On Save and Run Button.......................................passed
+Then User Should Be Redirected To Create Run Page...........................passed
+And Container Volume Minimization Is Selected By default....................passed
+When User select container category as "Sea Containers".....................passed
+And User select container name as "40 Standard".............................passed
+Then The Other Container Categories Should Be Disabled According To Selected "Sea Containers"..passed
+When User Click On Next Button..............................................passed
+And User Select "Instant"...................................................passed
+And User Set Run Name.......................................................passed
+And User Click On Run Button................................................passed
+Then Run Should Be Created..................................................passed
+And Run Should succeed......................................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Create Run" name="[Case_ID_6648][Case_ID_6649][Case_ID_6650][Case_ID_6651] Create Run Using Container Volume Minimization - #1.4" time="39.745">
+    <failure type="TypeError" message="Cannot read properties of undefined (reading 'data')"><![CDATA[    at LoadPage.<anonymous> (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:1290:35)
+    at fulfilled (/home/nefaa/repos/deeppack/e2e-tests/ui-tests/src/pages/loadPage.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    <system-out><![CDATA[Given a logged user with "Owner" role.......................................passed
+And User Click On Create Load...............................................passed
+Given "Land & Sea shipment" Transportation Mode Is Selected By Default......passed
+And the user selects a CSV file "test-data/valid_csv.csv"...................passed
+And User Set Load Name......................................................passed
+And User Click On Save and Run Button.......................................passed
+Then User Should Be Redirected To Create Run Page...........................passed
+And Container Volume Minimization Is Selected By default....................passed
+When User select container category as "Ground Pallet"......................passed
+And User select container name as "US Pallet"...............................passed
+Then The Other Container Categories Should Be Disabled According To Selected "Ground Pallet"..passed
+When User Click On Next Button..............................................passed
+And User Select "Instant"...................................................passed
+And User Set Run Name.......................................................passed
+And User Click On Run Button................................................passed
+Then Run Should Be Created..................................................passed
+And Run Should succeed......................................................passed]]></system-out>
+  </testcase>
+</testsuite>
