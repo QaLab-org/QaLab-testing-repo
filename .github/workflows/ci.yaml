@@ -31,8 +31,6 @@ jobs:
       - name: check working directory
         run : |
            pwd
-           cd ..
-           pwd
            ls
            cd unit-tests
 
@@ -64,8 +62,6 @@ jobs:
     steps:
       - name: check working directory
         run : |
-           pwd
-           cd ..
            pwd
            ls
            cd e2e-tests
