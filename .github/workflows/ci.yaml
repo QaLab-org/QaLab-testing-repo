@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
     
 
-
 jobs:
 
   build:
@@ -29,15 +28,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      - name: check working directory
+        run : |
+           pwd
+           cd ..
+           pwd
+           ls
+           cd unit-tests
+
       - name: Run unit tests
-        run: echo "Unit tests are success..."
+        run: |
+           cd unit-tests
+           echo "Unit tests are success..."
 
       - name: Upload Test Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: unit-tests-artifacts
-          path: components/unit-tests/artifacts
+          path: unit-tests/artifacts
   
   deploy-app:
     name: 🚀 Deploy-app
@@ -53,15 +62,26 @@ jobs:
     needs: [deploy-app]
     runs-on: ubuntu-latest
     steps:
-      - name: Run e2e tests
-        run: echo "🔧 Build is success..."
+      - name: check working directory
+        run : |
+           pwd
+           cd ..
+           pwd
+           ls
+           cd e2e-tests
+           
 
+      - name: Run e2e tests
+        run: |
+           cd e2e-tests
+           echo "🔧 e2e tests is success..."
+      
       - name: Upload Test Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: e2e-tests-artifacts
-          path: components/e2e-tests/artifacts
+          path: e2e-tests/artifacts
   
   tear-down:
     name: 🧪 Clean-up
