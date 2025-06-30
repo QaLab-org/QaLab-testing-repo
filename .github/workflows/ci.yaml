@@ -39,6 +39,8 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
+              pwd
+              ls
               echo "Unit tests are success..."
               sleep 30
   
@@ -60,7 +62,9 @@ jobs:
     steps:
       - name: Run e2e tests
         run: | 
-          echo "🔧 Build is success..."
+          pwd
+          ls
+          echo "🔧 e2e is success..."
           sleep 30
           
         
