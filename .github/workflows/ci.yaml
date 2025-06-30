@@ -28,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: check working directory
         run : |
            pwd
@@ -60,6 +63,9 @@ jobs:
     needs: [deploy-app]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - name: check working directory
         run : |
            pwd
