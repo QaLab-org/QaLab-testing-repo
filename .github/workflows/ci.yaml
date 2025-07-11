@@ -62,8 +62,6 @@ jobs:
     name: 🧪 E2E tests
     needs: [deploy-app]
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.34.3-noble 
 
     env:
        TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
@@ -75,6 +73,7 @@ jobs:
       - name: Install Dependencies
         run: |
            cd e2e-tests
+           npx playwright install
            npm install -g @testmo/testmo-cli
            npm ci
           
