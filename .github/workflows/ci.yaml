@@ -62,10 +62,23 @@ jobs:
     name: 🧪 E2E tests
     needs: [deploy-app]
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.53.0-noble
+
+    env:
+       TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+       CI: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+
+      - name: Install Dependencies
+        run: |
+           cd e2e-tests
+           npm install -g @testmo/testmo-cli
+           npm ci
+          
+
       - name: check working directory
         run : |
            pwd
@@ -76,7 +89,7 @@ jobs:
       - name: Run e2e tests
         run: |
            cd e2e-tests
-           echo "🔧 e2e tests is success..."
+           npm test
       
       - name: Upload Test Artifacts
         if: always()
@@ -84,6 +97,32 @@ jobs:
         with:
           name: e2e-tests-artifacts
           path: e2e-tests/artifacts
+
+      - name: Publish Test Results
+        shell: bash
+        env: 
+           RUN_NAME: "Frontend Run - $(date +'%Y-%m-%d_%H-%M-%S')"
+        run: |
+           npx testmo automation:resources:add-link \
+                      --name "GitHub repository" \
+                      --url https://github.com/instadeepai/anakin/actions/runs/${{ github.run_id }} \
+                      --resources resources.json
+
+           npx testmo automation:resources:add-artifact \
+                      --name "Artifacts" \
+                      --url "https://github.com/instadeepai/anakin/actions/runs/${{ github.run_id }}/artifacts" \
+                      --note "Test result reports"
+           
+           npx testmo automation:run:submit \
+                      --instance "https://instadeepltd.testmo.net/" \
+                      --project-id 6 \
+                      --name $RUN_NAME \
+                      --source "frontend" \
+                      --resources resources.json \
+                      --results artifacts/test-results/cucumber-report.xml
+        
+
+      
   
   tear-down:
     name: 🧪 Clean-up
