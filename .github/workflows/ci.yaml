@@ -93,24 +93,22 @@ jobs:
 
       - name: Publish Test Results
         shell: bash
-        env: 
-           RUN_NAME: "Frontend Run - $(date +'%Y-%m-%d_%H-%M-%S')"
         run: |
            cd e2e-tests
            npx testmo automation:resources:add-link \
                       --name "GitHub repository" \
-                      --url https://github.com/instadeepai/anakin/actions/runs/${{ github.run_id }} \
+                      --url https://github.com/QaLab-org/QaLab-testing-repo/actions/runs/${{ github.run_id }} \
                       --resources resources.json
 
            npx testmo automation:resources:add-artifact \
                       --name "Artifacts" \
-                      --url "https://github.com/instadeepai/anakin/actions/runs/${{ github.run_id }}/artifacts" \
+                      --url "https://github.com/QaLab-org/QaLab-testing-repo/actions/runs/${{ github.run_id }}/artifacts" \
                       --note "Test result reports"
            
            npx testmo automation:run:submit \
                       --instance "https://instadeepltd.testmo.net/" \
                       --project-id 6 \
-                      --name $RUN_NAME \
+                      --name "Completed Run" \
                       --source "frontend" \
                       --resources resources.json \
                       --results artifacts/test-results/cucumber-report.xml
