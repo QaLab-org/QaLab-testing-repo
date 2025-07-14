@@ -11,7 +11,7 @@ const selectors = {
     removeFromCartSauceLabsBackpack: '//button[@data-test="remove-sauce-labs-backpack"]',
     shoppingCartLink: '//a[@class="shopping_cart_link"]',
     inventoryItemName: '//div[@class="inventory_item_name"]',
-    checkoutButton: '//button[@data-test="checkout"]'
+    checkoutButton: '//button[@data-test="checkoutt"]'
 
 }
 
