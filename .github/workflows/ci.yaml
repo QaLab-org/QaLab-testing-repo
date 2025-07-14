@@ -92,6 +92,7 @@ jobs:
           path: e2e-tests/artifacts
 
       - name: Publish Test Results
+        if: always()
         shell: bash
         run: |
            cd e2e-tests
