@@ -8,12 +8,12 @@ Given("I am on the Inventory Page", async (): Promise<void> => {
     await cartPage.verifyNavigatedToInventoryPage();
 });
 
-When("I add Sauce Labs Backpack to the cart", async (): Promise<void> => {
-    await cartPage.addSauceLabsBackpackToCart();
+When("I add {string} to the cart", async (productName:string): Promise<void> => {
+    await cartPage.addProductToCart(productName);
 });
 
-Then("The item {string} should be in the cart", async (valueString1: string): Promise<void> => {
-    await cartPage.verifyItemInCart('Sauce Labs Backpack');
+Then("The item {string} should be in the cart", async (productName: string): Promise<void> => {
+    await cartPage.verifyProductInCart(productName);
 });
 
 When("I proceed to checkout", async (): Promise<void> => {

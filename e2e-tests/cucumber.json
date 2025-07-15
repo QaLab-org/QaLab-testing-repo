@@ -7,7 +7,7 @@
     "paths": [
       "src/test/features/*.feature"
     ],
-    "retry": 1,
+    "retry": 0,
     "publishQuiet": true,
     "dryRun": false,
     "require": [
