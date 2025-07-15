@@ -23,7 +23,7 @@ Before(async (scenario: any) => {
   const scenarioName = scenario.pickle.name;
   const context = await browser.newContext({
     recordVideo: {
-      dir: `artifacts/videos/${scenarioName}`,
+      dir: `./videos/${scenarioName}`,
     },
   });
 
