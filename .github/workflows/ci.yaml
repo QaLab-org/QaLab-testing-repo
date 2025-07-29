@@ -17,11 +17,11 @@ jobs:
       - name: Build-app
         run: |
               echo "🔧 Build is success..."
-              sleep 60
+              
       - name: run-app
         run: |
               echo " different log"
-              sleep 60
+             
   lint:
     name: 🕵️ Lint
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
       - name: Check lint issues
         run: |
               echo "No Lint issues found"  
-              sleep 30
+             
   
   unit-test:
     name: 🕵️ Unit tests
@@ -42,7 +42,7 @@ jobs:
               pwd
               ls
               echo "Unit tests are success..."
-              sleep 30
+             
   
   deploy-app:
     name: 🚀 Deploy-app
@@ -52,7 +52,7 @@ jobs:
       - name: Deploy the app
         run: |
               echo "App deploy is success..."
-              sleep 60
+             
     
 
   e2e-tests:
@@ -65,7 +65,7 @@ jobs:
           pwd
           ls
           echo "🔧 e2e is success..."
-          sleep 30
+          
           
         
   
@@ -77,6 +77,6 @@ jobs:
       - name: Free up resources
         run: |
             echo "teardown is success..."
-            sleep 15
+            
             exit 1
 
